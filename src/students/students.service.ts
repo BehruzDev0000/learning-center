@@ -39,7 +39,7 @@ export class StudentsService {
       if(!course){
         throw new NotFoundException('Course not found')
       }
-      const student=await this.studentModel.create({createStudentDto})
+      const student=await this.studentModel.create({...createStudentDto})
       
       await this.redis.del(this.STUDENTS_CACHE_KEY);
       

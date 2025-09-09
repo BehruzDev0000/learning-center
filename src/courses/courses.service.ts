@@ -25,7 +25,7 @@ export class CoursesService {
       if(startdate>enddate){
         throw new BadRequestException('Start date cannot be greater than end date')
       }
-      const course=await this.courseModel.create({createCourseDto})
+      const course=await this.courseModel.create({...createCourseDto})
       
       await this.redis.del(this.COURSES_CACHE_KEY);
       

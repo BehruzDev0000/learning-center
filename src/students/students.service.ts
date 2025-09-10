@@ -5,7 +5,7 @@ import { InjectModel } from '@nestjs/sequelize';
 import { Student } from './entities/student.entity';
 import { handleError } from 'src/utils/error.response';
 import { Course } from 'src/courses/entities/course.entity';
-import { successResponse } from './entities/success.response';
+import { successResponse } from 'src/utils/success.response';
 import { InjectRedis } from '@nestjs-modules/ioredis';
 import Redis from 'ioredis';
 

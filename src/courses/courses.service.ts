@@ -4,7 +4,7 @@ import { UpdateCourseDto } from './dto/update-course.dto';
 import { InjectModel } from '@nestjs/sequelize';
 import { Course } from './entities/course.entity';
 import { handleError } from 'src/utils/error.response';
-import { successResponse } from 'src/students/entities/success.response';
+import { successResponse } from 'src/utils/success.response';
 import { InjectRedis } from '@nestjs-modules/ioredis';
 import Redis from 'ioredis';
 import { Student } from 'src/students/entities/student.entity';
